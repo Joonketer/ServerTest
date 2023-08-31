@@ -1,4 +1,4 @@
-package ServerTest.ServerTest;
+package ServerTest.ServerTest.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

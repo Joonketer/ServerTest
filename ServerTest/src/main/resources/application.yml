@@ -1,20 +1,22 @@
 spring:
-  # ??? ?? ??? ??x, ?? ???????. ????? docker-compose???? ?? ??
-  #  datasource:
-  #    driver-class-name: com.mysql.cj.jdbc.Driver
-  #    url: jdbc:mysql://database:3306/users_db?useSSL=false
-  #    username: root
-  #    password: '1234'
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://database:3306/users_db?useSSL=false
+    username: root
+    password: '1234'
 
 
   jpa:
-    open-in-view: true
     hibernate:
       ddl-auto: create
-      naming:
-        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-      use-new-id-generator-mappings: false
-    show-sql: true
+    show-sql: true # ???? sql ??
     properties:
-      hibernate.format_sql: true
-      dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+      hibernate:
+        format_sql: true # sql ??? ??
+        default_batch_fetch_size: 1000 # ??? ??? ?? ? ?? ??? : 100 ~ 1000 ??
+        jdbc:
+          time_zone: Asia/Seoul
+
+logging:
+  level:
+    org.hibernate.SQL: debug

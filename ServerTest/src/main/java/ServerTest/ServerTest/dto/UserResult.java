@@ -1,5 +1,6 @@
-package ServerTest.ServerTest;
+package ServerTest.ServerTest.dto;
 
+import ServerTest.ServerTest.entity.UserEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package ServerTest.ServerTest;
+package ServerTest.ServerTest.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

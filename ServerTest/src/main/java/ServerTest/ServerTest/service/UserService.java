@@ -1,5 +1,8 @@
-package ServerTest.ServerTest;
+package ServerTest.ServerTest.service;
 
+import ServerTest.ServerTest.dto.UserDto;
+import ServerTest.ServerTest.entity.UserEntity;
+import ServerTest.ServerTest.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -12,12 +15,12 @@ public class UserService {
     private final UserRepository userRepository;
 
     public UserEntity create(UserDto userDto) {
-
+        
         UserEntity userEntity = UserEntity.builder()
                 .username(userDto.getUsername())
                 .password(userDto.getPassword())
                 .build();
-
+        
         return userRepository.save(userEntity);
     }
 
